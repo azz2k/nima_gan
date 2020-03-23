@@ -1,5 +1,7 @@
 # nima_gan
-This is an attempt at designing and training a GAN to generate nice images. It is implemented in PyTorch. It has been inspired by the
+This is an attempt at designing and training a GAN to generate nice images. It is implemented in PyTorch.
+
+![GAN generated images](img/nima_gan.jpg?raw=true "GAN generated images")
 
 A lot of the code is just a modified version of the basic PyTorch [DCGAN TUTORIAL](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html).
 
