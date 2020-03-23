@@ -1,0 +1,14 @@
+find /mnt/hgfs/AVA_dataset/images/images/images/ -name '*.jpg' -exec ./convert.sh {} \;
+find /media/chris/Inateck/DL/AVA_dataset/images/images/ -name '*.jpg' | parallel -j8 ./convert.sh {} \;
+
+ubuntu:~$ cat convert.sh 
+#!/bin/bash
+convert $1 -resize 224x224! -quality 85 /mnt/hgfs/AVA_dataset/images/small/$(basename $1)
+
+ubuntu:~$ sudo ntfs-3g /dev/sdb4 /media/chris/Inateck/
+
+ubuntu:~$ cat convert.sh 
+#!/bin/bash
+convert $1 -resize 224x224! -quality 85 /media/chris/Inateck/DL/AVA_dataset/images/small/$(basename $1)
+
+robocopy D:\DL\AVA_dataset\images\images\images\ E:\DL\AVA_dataset\images\images\ /MIR /MT:32
